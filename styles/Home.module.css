@@ -717,7 +717,7 @@ li .dropdown {
   }
 
   .cardMenuLeft {
-    background-color: #2525ff;
+    background-color: transparent;
     width: 560px;
     display: flex;
     justify-content: center;
