@@ -669,6 +669,7 @@ li .dropdown {
     margin-left: 0;
     right: none;
     border: none;
+    margin-top: 16px;
     width: max-content;
     outline: none;
     background-color: rgb(3, 0, 163);
@@ -681,40 +682,45 @@ li .dropdown {
   }
 
   .menuMalasngoding{
-    width: 50%;
+    width: 100%;
     display: flex;
+    margin-top: 60px;
+    text-align: left;
     opacity: 0;
-    align-items: center;
     transition: 0.4s ease-in-out;
-    justify-content: center;
   }
 
   .menuMalasngoding2 {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .menuMalasngoding ul {
-    list-style-type: none;
+    position: relative;
     color: black;
     margin: 0;
+    width: 100vw;
     padding: 0;
     transition: 0.4s ease-in-out;
-    overflow: hidden;
   }
   
   .menuMalasngoding > ul > li {
     transition: 0.4s ease-in-out;
     float: left;
+    margin-bottom: 20px;
+    width: 100vw;
+    text-align: left;
     color: black;
+    z-index: 44444;
   }
-
+  
   .menuMalasngoding li a {
     display: inline-block;
     color: black;
-    text-align: center;
+    text-align: left;
+    width: 94vw;
     padding: 14px 16px;
     text-decoration: none;
   }
@@ -724,7 +730,9 @@ li .dropdown {
   }
 
   .menuMalasngoding li a:hover{
-    background-color: #2525ff;
+    background-color: #0000bd;
+    border-radius: 99999px;
+    color: white;
   }
 
   li .dropdown {
