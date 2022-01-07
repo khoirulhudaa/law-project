@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {Carousel} from 'react-bootstrap';
 import s from '../styles/Home.module.css'
+import '../styles/Home.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, FaInstagram, faWhatsapp } from '@fortawesome/free-solid-svg-icons'
 
@@ -10,10 +11,31 @@ export default function Home() {
   const [lebar, setLebar] = useState('');
   const [isActive, setIsActive] = useState(false)
   const [isActived, setIsActived] = useState(false)
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isLebar, setIsLebar] = useState(0);
+
+  const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+  };
+
+  const handleLebar = () => {
+      const lebars = window.innerWidth;
+      setIsLebar(lebars);
+  };
 
   useEffect(() => {
-    setLebar(window.innerWidth)
-  }, [])
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleLebar, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('scroll', handleLebar);
+    };
+
+    return () => {
+    };
+  }, [scrollPosition, isLebar])
 
   const tombol = () => {
     setIsActive(!isActive)
@@ -65,9 +87,9 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      {isActive ? 
-        <section className={s.navbars} id={s.showNavbars}>
-          {
+      {isActive || scrollPosition > 0 && isLebar > 800 ? 
+        <section className={s.navbars, s.navbars2} id={s.showNavbars}>
+        {
             isActived ? (
               <div className={s.btnToggle} onClick={tombol}>
                 <img src="/times-solid.svg" alt="images" className={s.bar} />
