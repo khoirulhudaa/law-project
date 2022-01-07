@@ -270,7 +270,7 @@ export default function Home() {
       </section>
       <section className={s.copyRight}>
         <div><small>32 Broadway, Suite 1818, New York, New York 10004 |  info@hamralawgroup.com  | 646-590-0571</small></div>
-        <div><small>© 2020 Hamra Law Group | Designed and Developed by Webterior Designs</small></div>
+        <div className={s.copy}><small>© 2020 Hamra Law Group | Designed and Developed by Webterior Designs</small></div>
       </section>
     </>
   )
