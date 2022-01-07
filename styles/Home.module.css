@@ -669,7 +669,7 @@ li .dropdown {
     margin-left: 0;
     right: none;
     border: none;
-    margin-top: 16px;
+    margin-top: 14px;
     width: max-content;
     outline: none;
     background-color: rgb(3, 0, 163);
@@ -678,7 +678,7 @@ li .dropdown {
     border-radius: 90px;
     transform: scale(0.9);
     font-size: 19px;
-    padding: 10px;
+    padding: 10px 20px;
   }
 
   .menuMalasngoding{
@@ -1175,7 +1175,7 @@ li .dropdown {
 
   #showNavbars {
     width: 100vw;
-    position: relative;
+    position: fixed;
     display: flex;  
     height: 100vh;
     overflow: hidden;
@@ -1185,7 +1185,7 @@ li .dropdown {
     padding-left: 10px;
     padding-bottom: 20px;
     opacity: 1;
-    top: 0px;
+    top: 54px;
     flex-direction: column; 
     transition: 0.4s ease-in-out;
   }
