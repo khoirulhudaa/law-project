@@ -9,6 +9,7 @@ import { faFacebook, FaInstagram, faWhatsapp } from '@fortawesome/free-solid-svg
 export default function Home() {
   const [lebar, setLebar] = useState('');
   const [isActive, setIsActive] = useState(false)
+  const [isActived, setIsActived] = useState(false)
 
   useEffect(() => {
     setLebar(window.innerWidth)
@@ -16,6 +17,7 @@ export default function Home() {
 
   const tombol = () => {
     setIsActive(!isActive)
+    setIsActived(!isActived)
   }
 
   return (
@@ -65,9 +67,16 @@ export default function Home() {
       </nav>
       {isActive ? 
         <section className={s.navbars} id={s.showNavbars}>
-          <div className={s.btnToggle} onClick={tombol}>
+          {
+            isActived ? (
+              <div className={s.btnToggle} onClick={tombol}>
+                <img src="/times-solid.svg" alt="images" className={s.bar} />
+            </div> 
+            ):
+              <div className={s.btnToggle} onClick={tombol}>
                 <img src="/bars-solid.svg" alt="images" className={s.bar} />
             </div> 
+          }
               <div className={s.menuMalasngoding} id={s.showMalas}>
                 <ul>
                     <li><a href="#">Home</a></li>
