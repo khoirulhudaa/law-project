@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import {Carousel} from 'react-bootstrap';
@@ -6,6 +7,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, FaInstagram, faWhatsapp } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
+  const [lebar, setLebar] = useState('');
+
+  useEffect(() => {
+    setLebar(window.innerWidth)
+  }, [])
+
   return (
     <>
      <Head>
@@ -16,14 +23,19 @@ export default function Home() {
       <nav className={s.navigasi}>
         <div className={s.navigasiLeft}>
           <div className={s.logo}>
-            <Image src="/drag.png" width={80} height={80} alt="image" />
+            <img src="/drag.png" alt="images" classNmae={s.logox} />
             <p>Law Group</p>
           </div>
         </div>
         <div className={s.navigasiRight}>
           <div className={s.childNavigasiRight}>
             <div className={s.contentChild}>
-              <Image src="/history.png" width={40} height={40} alt="image" className={s.imgs} />
+              {
+                lebar < 650 ? (
+                  <Image src="/history.png" width={24} height={24} alt="image" className={s.imgs} />
+                  ):
+                  <Image src="/history.png" width={40} height={40} alt="image" className={s.imgs} />
+              }
             </div>
             <div className={s.contentChild}>
               <p>WORK HOUR</p>
@@ -32,7 +44,12 @@ export default function Home() {
           </div>
           <div className={s.childNavigasiRight}>
             <div className={s.contentChild}>
-              <Image src="/location-pin.png" width={40} height={40} alt="image" />
+            {
+                lebar < 650 ? (
+                  <Image src="/location-pin.png" width={24} height={24} alt="image" className={s.imgs} />
+                  ):
+                  <Image src="/location-pin.png" width={40} height={40} alt="image" className={s.imgs} />
+              }
             </div>
             <div className={s.contentChild}>
               <p>WORK HOUR</p>
