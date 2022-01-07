@@ -36,6 +36,15 @@
   min-height: 60px;
 }
 
+.logo img {
+  width: 70px;
+}
+
+.logo p {
+  position: relative;
+  top: 8px;
+}
+
 .carousel {
   position: relative;
   margin-top: -100px;
@@ -87,6 +96,7 @@
   display: flex;
   min-height: 70px;
   z-index: 3333;
+  transition: 0.4s ease-in-out;
   background-color: transparent;
 }
 
@@ -226,7 +236,7 @@ li .dropdown {
 }
 
 .btnLaw {
-  color: orange;
+  color: #ffe600;
   font-weight: 600;
   font-size: 20px;
   border: none;
@@ -591,12 +601,13 @@ li .dropdown {
     display: flex;  
     height: 0px;
     overflow: hidden;
+    transition: 0.4s ease-in-out;
     z-index: 3333;
     background-color: transparent;
     color: black;
     padding-left: 10px;
     padding-bottom: 20px;
-    opacity: 0;
+    opacity: 1;
     flex-direction: column; 
   }
 
@@ -619,6 +630,7 @@ li .dropdown {
   .menuMalasngoding{
     width: 50%;
     display: flex;
+    opacity: 0;
     align-items: center;
     justify-content: center;
   }
@@ -632,13 +644,17 @@ li .dropdown {
 
   .menuMalasngoding ul {
     list-style-type: none;
+    color: black;
     margin: 0;
     padding: 0;
+    transition: 0.4s ease-in-out;
     overflow: hidden;
   }
-
+  
   .menuMalasngoding > ul > li {
+    transition: 0.4s ease-in-out;
     float: left;
+    color: black;
   }
 
   .menuMalasngoding li a {
@@ -751,7 +767,7 @@ li .dropdown {
   }
 
   .btnLaw {
-    color: orange;
+    color: #ffe600;
     font-weight: 600;
     font-size: 20px;
     border: none;
@@ -1060,5 +1076,47 @@ li .dropdown {
   #right4 {
     position: relative;
     left: 0px;
+  }
+
+  .btnToggle {
+    position: absolute;
+    z-index: 444;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: white;
+    right: 30px;
+    border-radius: 999px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .btnToggle img {
+    width: 20px;
+    height: 20px;
+  }
+
+  #showNavbars {
+    width: 100vw;
+    display: flex;  
+    height: 400px;
+    overflow: hidden;
+    z-index: 3333;
+    background-color: transparent;
+    color: black;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    opacity: 1;
+    flex-direction: column; 
+    transition: 0.4s ease-in-out;
+  }
+
+  #showMalas{
+    opacity: 1;
+    transition: 0.4s;
   }
 }

@@ -8,10 +8,15 @@ import { faFacebook, FaInstagram, faWhatsapp } from '@fortawesome/free-solid-svg
 
 export default function Home() {
   const [lebar, setLebar] = useState('');
+  const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
     setLebar(window.innerWidth)
   }, [])
+
+  const tombol = () => {
+    setIsActive(!isActive)
+  }
 
   return (
     <>
@@ -58,29 +63,62 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <section className={s.navbars}>
-        <div className={s.menuMalasngoding}>
-          <ul>
-              <li><a href="#">Home</a></li>
-              <li className={s.dropdown}><a href="#">Practice areas</a>
-                <ul className={s.isiDropdown}>
-                      <li><a href="#">Employment Law</a></li>
-                      <li><a href="#">Intellectual Property Law</a></li>
-                      <li><a href="#">Corporate & Business Law</a></li>
-                      <li><a href="#">Matrimonial Family Law</a></li>
-                      <li><a href="#">Corporate Litigation</a></li>
-                      <li><a href="#">Commercial Law</a></li>
-                      <li><a href="#">International Commercial Law</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Our attorneys</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
-          </div>
-          <div className={s.menuMalasngoding2}>
-            <button className={s.btnConsultation}>Go Consultation</button>
-          </div>
-      </section>
+      {isActive ? 
+        <section className={s.navbars} id={s.showNavbars}>
+          <div className={s.btnToggle} onClick={tombol}>
+                <img src="/bars-solid.svg" alt="images" className={s.bar} />
+            </div> 
+              <div className={s.menuMalasngoding} id={s.showMalas}>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li className={s.dropdown}><a href="#">Practice areas</a>
+                      <ul className={s.isiDropdown}>
+                            <li><a href="#">Employment Law</a></li>
+                            <li><a href="#">Intellectual Property Law</a></li>
+                            <li><a href="#">Corporate & Business Law</a></li>
+                            <li><a href="#">Matrimonial Family Law</a></li>
+                            <li><a href="#">Corporate Litigation</a></li>
+                            <li><a href="#">Commercial Law</a></li>
+                            <li><a href="#">International Commercial Law</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Our attorneys</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+              </div> 
+            
+              <div className={s.menuMalasngoding2}>
+                <button className={s.btnConsultation}>Go Consultation</button>
+              </div>
+          </section>
+          : 
+          <section className={s.navbars}>
+          <div className={s.btnToggle} onClick={tombol}>
+                <img src="/bars-solid.svg" alt="images" className={s.bar} />
+            </div> 
+              <div className={s.menuMalasngoding}>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li className={s.dropdown}><a href="#">Practice areas</a>
+                      <ul className={s.isiDropdown}>
+                            <li><a href="#">Employment Law</a></li>
+                            <li><a href="#">Intellectual Property Law</a></li>
+                            <li><a href="#">Corporate & Business Law</a></li>
+                            <li><a href="#">Matrimonial Family Law</a></li>
+                            <li><a href="#">Corporate Litigation</a></li>
+                            <li><a href="#">Commercial Law</a></li>
+                            <li><a href="#">International Commercial Law</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Our attorneys</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+              </div> 
+              <div className={s.menuMalasngoding2}>
+                <button className={s.btnConsultation}>Go Consultation</button>
+              </div>
+          </section>
+        }
       <Carousel className={s.carousel}>
         <Carousel.Item>
           <img
