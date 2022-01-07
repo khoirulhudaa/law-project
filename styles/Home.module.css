@@ -1167,8 +1167,9 @@ li .dropdown {
 
   #showNavbars {
     width: 100vw;
+    position: relative;
     display: flex;  
-    height: 400px;
+    height: 100vh;
     overflow: hidden;
     z-index: 3333;
     background-color: white;
@@ -1176,6 +1177,7 @@ li .dropdown {
     padding-left: 10px;
     padding-bottom: 20px;
     opacity: 1;
+    top: 0px;
     flex-direction: column; 
     transition: 0.4s ease-in-out;
   }
