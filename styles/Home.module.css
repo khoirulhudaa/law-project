@@ -511,6 +511,7 @@ li .dropdown {
     justify-content: center;
     align-items: center;
     width: 80%;
+    margin-left: 82px;
   }
 
   .childNavigasiRight {
@@ -518,8 +519,8 @@ li .dropdown {
     justify-content: center;
     align-items: center;
     width: 110px;
-    margin-right: 0px;
     margin-left: 0px;
+    margin-right: 0px;
     min-height: 60px;
   }
 
