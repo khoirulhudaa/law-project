@@ -126,7 +126,7 @@ export default function Home() {
               <button className={s.btnLaw}>Learn More</button>
             </div>
           </div>
-          <div className={s.cardMenu}>
+          <div className={s.cardMenu} id={s.cardMenu1}>
             <div className={s.cardMenuRight} id={s.right1}>
               <h3>Family Law</h3>
               <p>Let us discuss your goals with you and determine if Virgin Hickman can help you settle this matter outside of the Courtroom.</p>
@@ -146,7 +146,7 @@ export default function Home() {
               <button className={s.btnLaw}>Learn More</button>
             </div>
           </div>
-          <div className={s.cardMenu}>
+          <div className={s.cardMenu} id={s.cardMenu2}>
             <div className={s.cardMenuRight} id={s.right2}>
               <h3>Family Law</h3>
               <p>Let us discuss your goals with you and determine if Virgin Hickman can help you settle this matter outside of the Courtroom.</p>
@@ -166,7 +166,7 @@ export default function Home() {
               <button className={s.btnLaw}>Learn More</button>
             </div>
           </div>
-          <div className={s.cardMenu}>
+          <div className={s.cardMenu} id={s.cardMenu3}>
             <div className={s.cardMenuRight} id={s.right3}>
               <h3>Family Law</h3>
               <p>Let us discuss your goals with you and determine if Virgin Hickman can help you settle this matter outside of the Courtroom.</p>
@@ -186,7 +186,7 @@ export default function Home() {
               <button className={s.btnLaw}>Learn More</button>
             </div>
           </div>
-          <div className={s.cardMenu}>
+          <div className={s.cardMenu} id={s.cardMenu4}>
             <div className={s.cardMenuRight} id={s.right4}>
               <h3>Family Law</h3>
               <p>Let us discuss your goals with you and determine if Virgin Hickman can help you settle this matter outside of the Courtroom.</p>

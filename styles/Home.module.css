@@ -692,22 +692,28 @@ li .dropdown {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 0px;
     align-items: center;
   }
 
   .experience h2 {
     margin-top: 30px;
     margin-bottom: 70px;
-    font-size: 40px;
+    font-size: 30px;
+    left: -40px;
+    position: relative;
+    width: 70vw;
   }
 
   .cardMenu {
-    margin-bottom: 70px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    width: 80vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
   }
 
   .cardMenuLeft {
@@ -716,28 +722,32 @@ li .dropdown {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px;
+    height: 260px;
     overflow: hidden;
   }
 
   .cardMenuLeft img {
     width: 450px;
-    height: 450px;
+    height: auto;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; 
-    border-radius: 88888px;
+    border-radius: 0;
   }
 
   .cardMenuRight {
     background-color: white;
-    width: 500px;
+    width: 90vw;
     position: relative;
-    left: -60px;
+    left: 0px;
     padding: 20px;
-    top: 40px;
-    height: 320px;
+    top: -50px;
+    height: max-content;
     box-shadow: 2px 4px 8px rgba(163, 161, 161, 0.568);
+  }
+
+  #cardMenu1, #cardMenu2, #cardMenu3, #cardMenu4 {
+    flex-direction: column-reverse;
   }
 
   .btnLaw {
@@ -987,21 +997,21 @@ li .dropdown {
 
   #right1 {
     position: relative;
-    left: 60px;
+    left: 0px;
   }
 
   #right2 {
     position: relative;
-    left: 60px;
+    left: 0px;
   }
 
   #right3 {
     position: relative;
-    left: 60px;
+    left: 0px;
   }
 
   #right4 {
     position: relative;
-    left: 60px;
+    left: 0px;
   }
 }
