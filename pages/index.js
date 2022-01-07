@@ -246,7 +246,7 @@ export default function Home() {
           <div className={s.wrapDirectur}>
             <div className={s.cardDirectur}>
               <div className={s.cardDirecturTop}>
-                <img src="/ahamra.jpg" alt="images" />
+                <img src="/Ahamra.jpg" alt="images" />
               </div>
               <div className={s.cardDicturBottom}>
                 <div className={s.platName}>

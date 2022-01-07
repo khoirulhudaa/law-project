@@ -965,7 +965,7 @@ li .dropdown {
   }
 
   .platName {
-    width: 100%;
+    width: 80vw;
     padding: 10px;
     position: relative;
     top: -40px;
@@ -1036,6 +1036,7 @@ li .dropdown {
     height: 60px;
     color: white;
     display: flex;
+    text-align: center;
     padding: 0 30px;
     justify-content: space-between;
     align-items: center;
